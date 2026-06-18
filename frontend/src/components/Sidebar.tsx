@@ -16,7 +16,8 @@ import {
   useTheme 
 } from '@mui/material';
 import { 
-  LayoutDashboard, 
+  LayoutDashboard,
+  Presentation,
   Users, 
   Upload, 
   LogOut, 
@@ -43,6 +44,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, onDrawerToggle, dr
 
   const menuItems = [
     { text: 'Dashboard', icon: <LayoutDashboard size={20} />, path: '/' },
+    { text: 'Resumo', icon: <Presentation size={20} />, path: '/resumo' },
     { text: 'Alunos', icon: <Users size={20} />, path: '/alunos' },
     { text: 'Importar Dados', icon: <Upload size={20} />, path: '/upload', roles: ['ADMIN', 'OPERATOR'] },
     { text: 'Solicitações', icon: <UserCheck size={20} />, path: '/solicitacoes', roles: ['ADMIN'] },

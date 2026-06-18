@@ -31,6 +31,7 @@ export const Layout: React.FC = () => {
   // Define o título da página baseado no path
   const getPageTitle = (pathname: string) => {
     if (pathname === '/') return 'Painel Executivo';
+    if (pathname.startsWith('/resumo')) return 'Resumo';
     if (pathname.startsWith('/alunos')) return 'Tabela de Alunos';
     if (pathname.startsWith('/upload')) return 'Importação de Arquivos';
     if (pathname.startsWith('/solicitacoes')) return 'Solicitações de Acesso';

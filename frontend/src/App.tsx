@@ -7,6 +7,7 @@ import { Layout } from './components/Layout';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { Dashboard } from './pages/Dashboard';
+import { Resume } from './pages/Resume';
 import { AlunosList } from './pages/AlunosList';
 import { UploadPage } from './pages/UploadPage';
 import { SolicitacoesPage } from './pages/SolicitacoesPage';
@@ -30,11 +31,12 @@ const App: React.FC = () => {
             <Routes>
               {/* Rota pública de Login */}
               <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/cadastro" element={<Register />} />
 
               {/* Rotas Privadas e Autenticadas protegidas pelo Layout */}
               <Route path="/" element={<Layout />}>
                 <Route index element={<Dashboard />} />
+                <Route path="resumo" element={<Resume />} />
                 <Route path="alunos" element={<AlunosList />} />
                 <Route path="upload" element={<UploadPage />} />
                 <Route path="solicitacoes" element={<SolicitacoesPage />} />
