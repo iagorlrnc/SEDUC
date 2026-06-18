@@ -80,10 +80,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, onDrawerToggle, dr
         </Avatar>
         <Box>
           <Typography variant="subtitle1" sx={{ fontWeight: 800, leadingHeight: 1.2, color: theme.palette.primary.main }}>
-            SEDUC-TO
+            Portal - SisAluno
           </Typography>
           <Typography variant="caption" color="text.secondary" sx={{ fontWeight: 500 }}>
-            Portal do Ensino Médio
+            Gerenciamento de Alunos
           </Typography>
         </Box>
       </Box>

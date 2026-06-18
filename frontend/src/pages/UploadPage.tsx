@@ -236,10 +236,10 @@ export const UploadPage: React.FC = () => {
       <Card sx={{ borderRadius: 3 }}>
         <CardContent sx={{ p: 4 }}>
           <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
-            Importador de Estudantes (ETL)
+            Importação
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-            Selecione ou arraste um arquivo com a lista de alunos bruta nos formatos <strong>JSON</strong>, <strong>XML</strong>, <strong>XLSX</strong> ou script de inserção <strong>SQL</strong>. O motor de ETL aplicará regras de limpeza de espaços, normalização de nomes, verificação matemática de CPFs e padronização geográfica.
+            Selecione ou arraste um arquivo com a lista de alunos bruta nos formatos <strong>JSON</strong>, <strong>XML</strong>, <strong>XLSX</strong> ou script de inserção <strong>SQL</strong>. O motor aplicará regras de limpeza de espaços, normalização de nomes, verificação matemática de CPFs e padronização geográfica.
           </Typography>
 
           <Box
@@ -311,7 +311,7 @@ export const UploadPage: React.FC = () => {
                 disabled={uploadMutation.isPending}
                 startIcon={uploadMutation.isPending ? <CircularProgress size={16} color="inherit" /> : <Upload size={16} />}
               >
-                {uploadMutation.isPending ? 'Executando ETL...' : 'Iniciar Carga (Load)'}
+                {uploadMutation.isPending ? 'Executando...' : 'Iniciar Carga'}
               </Button>
             </Box>
           )}
@@ -324,7 +324,7 @@ export const UploadPage: React.FC = () => {
                 sx={{ borderRadius: 2, mb: 2 }}
               >
                 <Typography variant="subtitle2" sx={{ fontWeight: 700 }}>
-                  Resultado do ETL: {uploadResult.status}
+                  Resultado: {uploadResult.status}
                 </Typography>
                 <Typography variant="body2">
                   {uploadResult.mensagem} — <strong>{uploadResult.registrosProcessados} alunos</strong> foram importados/atualizados no banco de dados.
@@ -368,7 +368,7 @@ export const UploadPage: React.FC = () => {
       <Card sx={{ borderRadius: 3 }}>
         <CardContent sx={{ p: 3 }}>
           <Typography variant="h6" sx={{ fontWeight: 700, mb: 2.5, display: 'flex', alignItems: 'center', gap: 1.5 }}>
-            <History size={20} color={theme.palette.text.secondary} /> Histórico de Processamento (Auditoria)
+            <History size={20} color={theme.palette.text.secondary} /> Histórico de Processamento
           </Typography>
 
           {loadingLogs ? (

@@ -404,7 +404,7 @@ export const Dashboard: React.FC = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                 <BrainCircuit size={28} color="#2a80ff" />
                 <Typography variant="h6" sx={{ fontWeight: 800, color: theme.palette.mode === 'light' ? '#003366' : '#fff' }}>
-                  Análise Cognitiva & Insights da IA
+                  Análise da IA
                 </Typography>
               </Box>
               <Divider sx={{ mb: 3 }} />
