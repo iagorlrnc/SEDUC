@@ -1,0 +1,30 @@
+# Dependências
+node_modules
+**/node_modules
+
+# Build outputs
+dist
+build
+target
+
+# Git
+.git
+.gitignore
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode
+.idea
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
